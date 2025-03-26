@@ -46,7 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     tourCard.innerHTML = `
                         <img src="${images[index]}" alt="Tour Image" class="tour-image"/>
                         <h3>${tour.title}</h3>
+                        <h3>${tour.price}</h3>
                         <p>${tour.description}</p>
+                        
                         <button class="edit-tour" data-id="${tour.id}">Edit</button>
                         <button class="delete-tour" data-id="${tour.id}">Delete</button>
                     `;
