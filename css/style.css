@@ -70,9 +70,21 @@ button {
 }
 
 button:hover {
-    background: #0056b3;
+    background: burlywood;
 }
 
 .hidden {
     display: none;
+}
+#add-tour{
+    background: hsl(347, 87%, 46%);
+    color: papayawhip;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px ;
+    
+}
+#add-tour:hover{
+    background: purple;
 }

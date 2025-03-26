@@ -4,19 +4,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const tourList = document.getElementById('tour-list');
     const toursSection = document.getElementById('tours');
     const homeSection = document.getElementById('home');
-
+    const baseURL='https://p-iota-two.vercel.app/tours';
     // Array of beautiful image URLs for tours
     const images = [
         './images/safari.jpg',  // Safari
-        "https://i.pinimg.com/736x/5a/66/d1/5a66d1526d38f309dbe4b84b786bbdb4.jpg",  // Beach
-        "https://i.pinimg.com/736x/4a/8c/80/4a8c8041a8802e73171865eb4a38c941.jpg",  // Mountain
-        "https://i.pinimg.com/736x/6a/fb/ea/6afbea984e655d849413f8f4239fa275.jpg",  // City view
-        "https://i.pinimg.com/736x/41/5e/f8/415ef8b0b37ee736ac026644d5f945a6.jpg",  // Forest hike
-        "https://i.pinimg.com/736x/37/c6/3d/37c63d81dd5a067d87a440a95ef2ad8d.jpg",  // Desert tour
-        "https://i.pinimg.com/736x/93/98/1f/93981fda1884e466f53b039ba9d08170.jpg",  // Lake view
-        "https://i.pinimg.com/736x/04/af/8f/04af8f55d834435ee58b247b277a5f74.jpg",  // Island tour
-        "https://i.pinimg.com/736x/6d/51/40/6d5140c75b0b0daa3545bfd18d2d5e00.jpg",  // Hiking
-        "https://i.pinimg.com/736x/cd/d6/b7/cdd6b7d99fd609fa065bc38c73fac6c9.jpg"   // culture
+        './images/beach.jpg',  // Beach
+        './images/mountain.jpg',  // Mountain
+        './images/cityview.jpg',  // City view
+        './images/foresthike.jpg',  // Forest hike
+        './images/deserttour.jpg',  // Desert tour
+        './images/lakeview.jpg',  // Lake view
+        './images/islandtour.jpg',  // Island tour
+        './images/hiking.jpg',  // Hiking
+        './images/culture.jpg',  // culture
     ];
 
     // Event listener for viewing tours
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fetch Tours (Read Operation)
     function fetchTours() {
-        fetch('http://localhost:3000/tours') // Mock API endpoint
+        fetch('https://p-iota-two.vercel.app/tours') // Mock API endpoint
             .then(response => response.json())
             .then(data => {
                 tourList.innerHTML = '';
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     tourCard.innerHTML = `
                         <img src="${images[index]}" alt="Tour Image" class="tour-image"/>
                         <h3>${tour.title}</h3>
-                        <p>${tour.body}</p>
+                        <p>${tour.description}</p>
                         <button class="edit-tour" data-id="${tour.id}">Edit</button>
                         <button class="delete-tour" data-id="${tour.id}">Delete</button>
                     `;
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Create Tour (Create Operation)
     function createTour(tourName) {
         const newTour = { title: tourName, body: "Tour details will be added soon." };
-        fetch('http://localhost:3000/tours', {
+        fetch('https://p-iota-two.vercel.app/tours', {
             method: 'POST',
             body: JSON.stringify(newTour),
             headers: {
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update Tour (Update Operation)
     function updateTour(id, newTitle) {
         const updatedTour = { title: newTitle, body: "Updated details of the tour." };
-        fetch(`https://localhost:3000/tours/${id}`, {
+        fetch(`https://p-iota-two.vercel.app/tours/${id}`, {
             method: 'PUT',
             body: JSON.stringify(updatedTour),
             headers: {
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Delete Tour (Delete Operation)
     function deleteTour(id) {
-        fetch(`https://localhost:3000/tours/${id}`, {
+        fetch(`https://p-iota-two.vercel.app/tours/${id}`, {
             method: 'DELETE'
         })
             .then(() => {
