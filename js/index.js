@@ -23,20 +23,20 @@ document.addEventListener('DOMContentLoaded', () => {
     viewToursButton.addEventListener('click', () => {
         homeSection.classList.add('hidden');
         toursSection.classList.remove('hidden');
-        fetchTours(); // Fetch the tours from the "API"
+        fetchTours(); 
     });
 
     // Event listener for adding a new tour
     addTourButton.addEventListener('click', () => {
         const newTour = prompt("Enter the new tour name:");
         if (newTour) {
-            createTour(newTour); // Create a new tour
+            createTour(newTour); 
         }
     });
 
     // Fetch Tours (Read Operation)
     function fetchTours() {
-        fetch('https://p-iota-two.vercel.app/tours') // Mock API endpoint
+        fetch('https://p-iota-two.vercel.app/tours') 
             .then(response => response.json())
             .then(data => {
                 tourList.innerHTML = '';
@@ -54,10 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     `;
                     tourList.appendChild(tourCard);
                 });
-                addTourEventListeners(); // Add event listeners after rendering
+                addTourEventListeners(); 
             })
             .catch(error => console.error('Error fetching tours:', error));
     }
+    // 
 
     // Create Tour (Create Operation)
     function createTour(tourName) {
@@ -72,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(response => response.json())
             .then(data => {
                 alert("New tour added successfully!");
-                fetchTours(); // Fetch tours again after creation
+                fetchTours(); 
             })
             .catch(error => console.error('Error creating tour:', error));
     }
@@ -90,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(response => response.json())
             .then(data => {
                 alert("Tour updated successfully!");
-                fetchTours(); // Fetch tours again after update
+                fetchTours(); 
             })
             .catch(error => console.error('Error updating tour:', error));
     }
@@ -102,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
             .then(() => {
                 alert("Tour deleted successfully!");
-                fetchTours(); // Fetch tours again after deletion
+                fetchTours(); 
             })
             .catch(error => console.error('Error deleting tour:', error));
     }
@@ -117,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const tourId = button.getAttribute('data-id');
                 const newTitle = prompt("Enter the new title for the tour:");
                 if (newTitle) {
-                    updateTour(tourId, newTitle); // Update tour
+                    updateTour(tourId, newTitle); 
                 }
             });
         });
@@ -126,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
             button.addEventListener('click', () => {
                 const tourId = button.getAttribute('data-id');
                 if (confirm("Are you sure you want to delete this tour?")) {
-                    deleteTour(tourId); // Delete tour
+                    deleteTour(tourId); 
                 }
             });
         });
