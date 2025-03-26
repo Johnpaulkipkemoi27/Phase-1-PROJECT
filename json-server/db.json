@@ -4,60 +4,70 @@
       "id": 1,
       "title": "Safari Adventure",
       "description": "Experience the wild in Africa with a thrilling safari adventure.",
+      "price":"1500 USD",
       "image": "./images/safari.jpg"
     },
     {
       "id": 2,
       "title": "Tropical Beach Escape",
       "description": "Relax on pristine beaches and soak up the sun in the tropics.",
+      "price":"2000 USD",
       "image": "./images/beach.jpg"
     },
     {
       "id": 3,
       "title": "Mountain Hiking",
       "description": "Embark on a challenging and scenic hike through the mountains.",
+      "price":"1000 USD",
       "image": "./images/mountain.jpg"
     },
     {
       "id": 4,
       "title": "City Tours",
       "description": "Explore the vibrant cities of the world and discover their hidden gems.",
+      "price":"2500 USD",
       "image": "./images/cityview.jpg"
     },
     {
       "id": 5,
       "title": "Forest Adventure",
       "description": "Explore hidden forests and nature trails on a thrilling adventure.",
+      "price":"1200 USD",
       "image": "./images/foresthiking.jpg"
     },
     {
       "id": 6,
       "title": "Desert Exploration",
       "description": "Embark on a unique desert safari and explore the vast dunes.",
+      "price":"30000 USD",
       "image": "./images/deserttour.jpg"
     },
     {
       "id": 7,
       "title": "Lake Side Retreat",
       "description": "Enjoy a peaceful retreat by a serene lake surrounded by nature.",
+      "price":"1800 USD",
       "image": "./images/lakeview.jpg"
     },
     {
       "id": 8,
       "title": "Island Adventure",
       "description": "Explore the remote islands with beaches, jungles, and adventure.",
+      "price":"2100 USD",
       "image": "./images/islandtour.jpg"
     },
     {
       "id": 9,
       "title": "Mountain Climbing",
       "description": "Reach the top of the world's tallest peaks on a daring mountain climb.",
+      "price":"1300 USD",
       "image": "./images/mountain.jpg"
     },
     {
       "id": 10,
       "title": " Culture",
       "description": "Discover the rich history and culture of the world's countries.",
+      "price":"2200 USD",
       "image": "./images/culture.jpg"
     },
     {
