@@ -4,61 +4,62 @@
       "id": 1,
       "title": "Safari Adventure",
       "description": "Experience the wild in Africa with a thrilling safari adventure.",
-      "image": "https://www.pinterest.com/pin/1085789791412282946/"
+      "image":"./images/safari.jpg"
     },
     {
       "id": 2,
       "title": "Tropical Beach Escape",
       "description": "Relax on pristine beaches and soak up the sun in the tropics.",
-      "image": "https://images.unsplash.com/photo-1563309367-92b6e9be0b9a"
+      "image": "./images/beach.jpg"
     },
     {
       "id": 3,
       "title": "Mountain Hiking",
       "description": "Embark on a challenging and scenic hike through the mountains.",
-      "image": "https://images.unsplash.com/photo-1554067009-1269b05410e4"
+      "image": "/images/mountain.jpg"
     },
     {
       "id": 4,
       "title": "City Tours",
       "description": "Discover the rich history of the world's most famous cities.",
-      "image": "https://images.unsplash.com/photo-1465883744482-e4baad53152a"
+      "image":"./images/cityview.jpg"
     },
     {
       "id": 5,
       "title": "Forest Adventure",
       "description": "Explore hidden forests and nature trails on a thrilling adventure.",
-      "image": "https://images.unsplash.com/photo-1518118013121-6e7034990fe5"
+      "image": "./images/foresthiking.jpg"
     },
     {
       "id": 6,
       "title": "Desert Exploration",
       "description": "Embark on a unique desert safari and explore the vast dunes.",
-      "image": "https://images.unsplash.com/photo-1499410783449-03a9f29a06d6"
+      "image": "./images/deserttour.jpg"
+
     },
     {
       "id": 7,
       "title": "Lake Side Retreat",
       "description": "Enjoy a peaceful retreat by a serene lake surrounded by nature.",
-      "image": "https://images.unsplash.com/photo-1563702873-e7c78e89098e"
+      "image": "./images/lakeview.jpg"
     },
     {
       "id": 8,
       "title": "Island Adventure",
       "description": "Explore the remote islands with beaches, jungles, and adventure.",
-      "image": "https://images.unsplash.com/photo-1484424741494-68a0734308ae"
+      "image": "./images/islandtour.jpg"
     },
     {
       "id": 9,
       "title": "Mountain Climbing",
       "description": "Reach the top of the world's tallest peaks on a daring mountain climb.",
-      "image": "https://images.unsplash.com/photo-1472152872769-876b9b4282ac"
+      "image": "./images/mountain.jpg"
     },
     {
       "id": 10,
       "title": " Culture",
       "description": "For the thrill-seekers, enjoy exciting sports like bungee jumping, rafting, and more.",
-      "image": "https://images.unsplash.com/photo-1499795655179-267c03a2e18b"
+      "image": "./images/culture.jpg"
     },
     {
       "id": "cc71",
