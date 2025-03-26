@@ -21,9 +21,9 @@
     {
       "id": 4,
       "title": "City Tours",
-      "description": "Discover the rich history of the world's most famous cities.",
+      "description": "Explore the vibrant cities of the world and discover their hidden gems.",
       "image":"./images/cityview.jpg"
-    },
+   },
     {
       "id": 5,
       "title": "Forest Adventure",
@@ -58,7 +58,7 @@
     {
       "id": 10,
       "title": " Culture",
-      "description": "For the thrill-seekers, enjoy exciting sports like bungee jumping, rafting, and more.",
+      "description": "Discover the rich history and culture of the world's countries.",
       "image": "./images/culture.jpg"
     },
     {
