@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(response => response.json())
             .then(data => {
                 tourList.innerHTML = '';
-                data.slice(0, 10).forEach((tour, index) => {
+                data.slice(0, 100).forEach((tour,index) => {
                     const tourCard = document.createElement('div');
                     tourCard.classList.add('tour-card');
                     tourCard.innerHTML = `
@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         <h3>${tour.title}</h3>
                         <h3>${tour.price}</h3>
                         <p>${tour.description}</p>
-                        
-                        <button class="edit-tour" data-id="${tour.id}">Edit</button>
+                        <p>${tour.location}</p>             
+                        <button class="book-tour" data-id="${tour.id}">Book</button>
                         <button class="delete-tour" data-id="${tour.id}">Delete</button>
                     `;
                     tourList.appendChild(tourCard);
@@ -78,22 +78,22 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(error => console.error('Error creating tour:', error));
     }
 
-    // Update Tour (Update Operation)
-    function updateTour(id, newTitle) {
-        const updatedTour = { title: newTitle, body: "Updated details of the tour." };
+    // Book Tour (Update Operation)
+    function bookTour(id, newTitle) {
+        const bookedTour = { title: newTitle, body: "Booked tour." };
         fetch(`https://p-iota-two.vercel.app/tours/${id}`, {
-            method: 'PUT',
-            body: JSON.stringify(updatedTour),
+            method: 'PATCH',
+            body: JSON.stringify(bookedTour),
             headers: {
                 'Content-Type': 'application/json'
             }
         })
             .then(response => response.json())
             .then(data => {
-                alert("Tour updated successfully!");
+                alert("Tour booked successfully!");
                 fetchTours(); 
             })
-            .catch(error => console.error('Error updating tour:', error));
+            .catch(error => console.error('Error booking tour:', error));
     }
 
     // Delete Tour (Delete Operation)
@@ -108,17 +108,17 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(error => console.error('Error deleting tour:', error));
     }
 
-    // Add event listeners for edit and delete buttons
+    // Add event listeners for book and delete buttons
     function addTourEventListeners() {
-        const editButtons = document.querySelectorAll('.edit-tour');
+        const bookButtons = document.querySelectorAll('.book-tour');
         const deleteButtons = document.querySelectorAll('.delete-tour');
 
-        editButtons.forEach(button => {
+        bookButtons.forEach(button => {
             button.addEventListener('click', () => {
                 const tourId = button.getAttribute('data-id');
-                const newTitle = prompt("Enter the new title for the tour:");
+                const newTitle = prompt("Enter the Travel date:");
                 if (newTitle) {
-                    updateTour(tourId, newTitle); 
+                    bookTour(tourId, newTitle); 
                 }
             });
         });
