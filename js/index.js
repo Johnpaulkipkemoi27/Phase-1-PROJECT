@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Book Tour (Update Operation)
     function bookTour(id, newTitle) {
-        const bookedTour = { title: newTitle, body: "Booked tour." };
+        const bookedTour = { status: "Booked" };
         fetch(`${baseURL}/${id}`, {
             method: 'PATCH',
             body: JSON.stringify(bookedTour),
