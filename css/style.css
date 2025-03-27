@@ -31,11 +31,9 @@ nav ul li a {
 .section {
     padding: 20px;
     margin: 20px;
-    background-image: url(../images/coour.jpg);
     border-radius: 10px;
     box-shadow: 0px;
-    background-size: auto;
-    
+    background-image: url(../images/white.jpg);
 }
 
 .tour-list {

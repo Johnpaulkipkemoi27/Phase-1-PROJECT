@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
         fetchTours(); 
     });
 
+
+
     // Event listener for adding a new tour
     addTourButton.addEventListener('click', () => {
         const newTour = prompt("Enter the new tour name:");
