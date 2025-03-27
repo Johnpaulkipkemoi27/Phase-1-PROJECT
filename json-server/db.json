@@ -5,13 +5,16 @@
       "title": "Safari Adventure",
       "description": "Experience the wild in Africa with a thrilling safari adventure.",
       "price": "1500 USD",
+      "location": "Maasai Mara,",
       "image": "./images/safari.jpg"
+
     },
     {
       "id": 2,
       "title": "Tropical Beach Escape",
       "description": "Relax on pristine beaches and soak up the sun in the tropics.",
       "price": "2000 USD",
+      "location":"Maldives",
       "image": "./images/beach.jpg"
     },
     {
@@ -19,6 +22,7 @@
       "title": "Mountain Hiking",
       "description": "Embark on a challenging and scenic hike through the mountains.",
       "price": "1000 USD",
+      "location":"Himalayas",
       "image": "./images/mountain.jpg"
     },
     {
@@ -26,6 +30,7 @@
       "title": "City Tours",
       "description": "Explore the vibrant cities of the world and discover their hidden gems.",
       "price": "2500 USD",
+      "location":"Paris",
       "image": "./images/cityview.jpg"
     },
     {
@@ -33,6 +38,7 @@
       "title": "Forest Adventure",
       "description": "Explore hidden forests and nature trails on a thrilling adventure.",
       "price": "1200 USD",
+      "location":"Amazon Rainforest",
       "image": "./images/foresthiking.jpg"
     },
     {
@@ -40,6 +46,7 @@
       "title": "Desert Exploration",
       "description": "Embark on a unique desert safari and explore the vast dunes.",
       "price": "30000 USD",
+      "location":"Dubai",
       "image": "./images/deserttour.jpg"
     },
     {
@@ -47,6 +54,7 @@
       "title": "Lake Side Retreat",
       "description": "Enjoy a peaceful retreat by a serene lake surrounded by nature.",
       "price": "1800 USD",
+      "location":"Lake Tahoe-USA",
       "image": "./images/lakeview.jpg"
     },
     {
@@ -54,6 +62,7 @@
       "title": "Island Adventure",
       "description": "Explore the remote islands with beaches, jungles, and adventure.",
       "price": "2100 USD",
+      "location":"Bora Bora",
       "image": "./images/islandtour.jpg"
     },
     {
@@ -61,6 +70,7 @@
       "title": "Mountain Climbing",
       "description": "Reach the top of the world's tallest peaks on a daring mountain climb.",
       "price": "1300 USD",
+      "location":"Mount Everest",
       "image": "./images/mountain.jpg"
     },
     {
@@ -68,17 +78,51 @@
       "title": " Culture",
       "description": "Discover the rich history and culture of the world's countries.",
       "price": "2200 USD",
+      "location":"Maasai Mara",
       "image": "./images/culture.jpg"
     },
     {
-      "id": "cc71",
-      "title": "escarpments",
-      "body": "Tour details will be added soon."
+      "id": "11",
+      "title": "Resorts",
+      "description": "Experience luxury and relaxation at the world's best resorts.",
+      "price": "3600 USD",
+      "location":"Bali",
+      "image": "./images/resort.jpg"
     },
     {
-      "id": "6466",
-      "title": "Culture",
-      "body": "Tour details will be added soon."
+      "id": "12",
+      "title": "Pyramids",
+      "description": "Explore the ancient pyramids and tombs of Egypt.",
+      "price": "2900 USD",
+      "location":"Pyramids of Giza",
+      "image": "./images/pyramids.jpg"
+    },
+    {
+      "id": "13",
+      "title": "Skiing",
+      "description": "Hit the slopes and enjoy the thrill of skiing in the mountains.",
+      "price": "1700 USD",
+      "location":"Switzerland",
+      "image": "./images/skiing.jpg"
+    },
+    {
+      "id": "14",
+      "title": "Cruise",
+      "description": "Sail the seas and explore exotic destinations on a luxury cruise.",
+      "price": "3400 USD",
+      "location":"Caribbean",
+      "image": "./images/cruise.jpg"
+    },
+    {
+      "id": "15",
+      "title": "Adventure",
+      "description": "Embark on an adrenaline-pumping adventure in the great outdoors.",
+      "price": "2500 USD",
+      "location":"New Zealand",
+      "image": "./images/adventure.jpg"
     }
+      
+      
+    
   ]
 }

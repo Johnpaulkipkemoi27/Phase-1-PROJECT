@@ -31,7 +31,7 @@ nav ul li a {
 .section {
     padding: 20px;
     margin: 20px;
-    background-image: url(../images/white.jpg);
+    background: #f4f4f4;
     border-radius: 10px;
     box-shadow: 0px ;
     

@@ -17,6 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
         './images/islandtour.jpg',  // Island tour
         './images/hiking.jpg',  // Hiking
         './images/culture.jpg',  // culture
+        './images/Resort.jpg',  // Resort tour
+        './images/pyramids.jpg',  // Pyramids tour
+        './images/skiing.jpg',  // Skiing
+        './images/cruise.jpg',  // cruise
+        './images/adventure.jpg',  // Adventure 
     ];
 
     // Event listener for viewing tours
@@ -36,11 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fetch Tours (Read Operation)
     function fetchTours() {
-        fetch('https://p-iota-two.vercel.app/tours') 
+        fetch(baseURL)
             .then(response => response.json())
             .then(data => {
                 tourList.innerHTML = '';
-                data.slice(0, 100).forEach((tour,index) => {
+                data.slice(0, 30).forEach((tour,index) => {
                     const tourCard = document.createElement('div');
                     tourCard.classList.add('tour-card');
                     tourCard.innerHTML = `
@@ -48,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <h3>${tour.title}</h3>
                         <h3>${tour.price}</h3>
                         <p>${tour.description}</p>
-                        <p>${tour.location}</p>             
+                        <h3>${tour.location}</h3>             
                         <button class="book-tour" data-id="${tour.id}">Book</button>
                         <button class="delete-tour" data-id="${tour.id}">Delete</button>
                     `;
@@ -63,8 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Create Tour (Create Operation)
     function createTour(tourName) {
         const newTour = { title: tourName, body: "Tour details will be added soon." };
-        fetch('https://p-iota-two.vercel.app/tours', {
-            method: 'POST',
+        fetch(`${baseURL}/${id}`,{
+             method: 'POST',
             body: JSON.stringify(newTour),
             headers: {
                 'Content-Type': 'application/json'
@@ -81,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Book Tour (Update Operation)
     function bookTour(id, newTitle) {
         const bookedTour = { title: newTitle, body: "Booked tour." };
-        fetch(`https://p-iota-two.vercel.app/tours/${id}`, {
+        fetch(`${baseURL}/${id}`, {
             method: 'PATCH',
             body: JSON.stringify(bookedTour),
             headers: {
@@ -98,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Delete Tour (Delete Operation)
     function deleteTour(id) {
-        fetch(`https://p-iota-two.vercel.app/tours/${id}`, {
+        fetch(`${baseURL}/${id}`,{
             method: 'DELETE'
         })
             .then(() => {
