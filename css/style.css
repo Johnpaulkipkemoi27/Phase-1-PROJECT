@@ -31,9 +31,10 @@ nav ul li a {
 .section {
     padding: 20px;
     margin: 20px;
-    background: #f4f4f4;
+    background-image: url(../images/coour.jpg);
     border-radius: 10px;
-    box-shadow: 0px ;
+    box-shadow: 0px;
+    background-size: auto;
     
 }
 
@@ -45,7 +46,7 @@ nav ul li a {
 }
 
 .tour-card {
-    background: whitesmoke;
+    background: burlywood;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0px ;
