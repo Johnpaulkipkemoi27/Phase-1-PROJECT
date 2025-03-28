@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Create Tour (Create Operation)
     function createTour(tourName) {
         const newTour = { title: tourName, body: "Tour details will be added soon." };
-        fetch(`${baseURL}/${id}`,{
+        fetch(baseURL, {
              method: 'POST',
             body: JSON.stringify(newTour),
             headers: {
