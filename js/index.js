@@ -34,11 +34,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Event listener for adding a new tour
-    addTourButton.addEventListener('click', () => {
-        const newTour = prompt("Enter the new tour name:");
-        if (newTour) {
-            createTour(newTour); 
-        }
+
+        addTourButton.addEventListener('click', () => {
+            const title = prompt("Enter the new tour name:");
+            const price = prompt("Enter the tour price:");
+            const description = prompt("Enter a short tour description:");
+            const location = prompt("Enter the tour location:");
+    
+            if (title && price && description && location) {
+                createTour(title, price, description, location);
+            }
+        
     });
 
     // Fetch Tours (Read Operation)
@@ -68,41 +74,46 @@ document.addEventListener('DOMContentLoaded', () => {
     // 
 
     // Create Tour (Create Operation)
-    function createTour(tourName) {
-        const newTour = { title: tourName, body: "Tour details will be added soon." };
+    function createTour(title, price, description, location) {
+        const newTour = { title, price, description, location };
         fetch(baseURL, {
-             method: 'POST',
+            method: 'POST',
             body: JSON.stringify(newTour),
             headers: {
                 'Content-Type': 'application/json'
             }
         })
-            .then(response => response.json())
-            .then(data => {
-                alert("New tour added successfully!");
-                fetchTours(); 
-            })
-            .catch(error => console.error('Error creating tour:', error));
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+            return response.json();
+        })
+        .then(() => {
+            alert("New tour added successfully!");
+            fetchTours();
+        })
+        .catch(error => console.error('Error creating tour:', error));
     }
 
     // Book Tour (Update Operation)
-    function bookTour(id, newTitle) {
-        const bookedTour = { status: "Booked" };
+    function bookTour(id) {
+        const travelDate = prompt("Enter the travel date (YYYY-MM-DD):");
+        if (!travelDate) {
+            alert("Travel date is required to book the tour.");
+            return;
+        }
+    
         fetch(`${baseURL}/${id}`, {
             method: 'PATCH',
-            body: JSON.stringify(bookedTour),
-            headers: {
-                'Content-Type': 'application/json'
-            }
+            body: JSON.stringify({ status: "Booked", travelDate }),
+            headers: { 'Content-Type': 'application/json' }
         })
-            .then(response => response.json())
-            .then(data => {
-                alert("Tour booked successfully!");
-                fetchTours(); 
-            })
-            .catch(error => console.error('Error booking tour:', error));
+        .then(response => response.json())
+        .then(() => {
+            alert("Tour booked successfully for " + travelDate);
+            fetchTours();
+        })
+        .catch(error => console.error('Error booking tour:', error));
     }
-
     // Delete Tour (Delete Operation)
     function deleteTour(id) {
         fetch(`${baseURL}/${id}`,{
@@ -123,12 +134,9 @@ document.addEventListener('DOMContentLoaded', () => {
         bookButtons.forEach(button => {
             button.addEventListener('click', () => {
                 const tourId = button.getAttribute('data-id');
-                const newTitle = prompt("Enter the Travel date:");
-                if (newTitle) {
-                    bookTour(tourId, newTitle); 
-                }
+                bookTour(tourId);
             });
-        });
+        }); 
 
         deleteButtons.forEach(button => {
             button.addEventListener('click', () => {
